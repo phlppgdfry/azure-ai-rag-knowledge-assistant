@@ -1,0 +1,15 @@
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+*.sqlite3*
+data/
+!data/.gitkeep
+.DS_Store
+build/
+dist/
+reports/

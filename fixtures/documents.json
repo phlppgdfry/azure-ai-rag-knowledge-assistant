@@ -1,0 +1,5 @@
+[
+  {"id":"invoice-policy","title":"Synthetisch factuurbeleid","groups":["finance"],"text":"Iedere factuur vereist goedkeuring van een andere medewerker dan de indiener. Een afwijkend rekeningnummer wordt eerst telefonisch gecontroleerd via een gekend contact. Automatische betaling is verboden in deze demo."},
+  {"id":"hr-confidential","title":"Synthetisch HR-beleid","groups":["hr"],"text":"Vertrouwelijk HR-document: opleidingsbudget voor deze fictieve afdeling bedraagt 7312 euro. Deze bron mag niet naar finance-gebruikers."},
+  {"id":"onboarding","title":"Synthetisch onthaal","groups":["finance","hr"],"text":"Nieuwe medewerkers volgen een AI-opleiding. Deel geen klantdocumenten met onbeheerde AI-tools. Meld fouten aan de interne proceseigenaar."}
+]

@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    ports:
+      - "127.0.0.1:8084:8084"
+    volumes:
+      - app-data:/app/data
+    security_opt:
+      - no-new-privileges:true
+    cap_drop: [ALL]
+volumes:
+  app-data:

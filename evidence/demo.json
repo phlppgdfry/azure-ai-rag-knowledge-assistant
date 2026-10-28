@@ -1,0 +1,14 @@
+{
+  "mode": "local-extractive",
+  "answer": "Iedere factuur vereist goedkeuring van een andere medewerker dan de indiener. Een afwijkend rekeningnummer wordt eerst telefonisch gecontroleerd via een gekend contact. Automatische betaling is verboden in deze demo. [90d312a9c0054f323c29298d894d171d5816236bd76bb305d3addee05073936e]",
+  "abstained": false,
+  "citations": [
+    {
+      "id": "90d312a9c0054f323c29298d894d171d5816236bd76bb305d3addee05073936e",
+      "document_id": "invoice-policy",
+      "title": "Synthetisch factuurbeleid",
+      "text": "Iedere factuur vereist goedkeuring van een andere medewerker dan de indiener. Een afwijkend rekeningnummer wordt eerst telefonisch gecontroleerd via een gekend contact. Automatische betaling is verboden in deze demo.",
+      "score": 1.252616
+    }
+  ]
+}
