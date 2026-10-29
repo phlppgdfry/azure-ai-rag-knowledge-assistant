@@ -1,0 +1,86 @@
+{
+  "mode": "local-extractive",
+  "synthetic": true,
+  "k_definition": "unique documents; precision denominator is k",
+  "limitations": "Small authored lexical dataset, no LLM answer correctness or cloud benchmark",
+  "results": [
+    {
+      "id": "invoice",
+      "retrieved": [
+        "invoice-policy"
+      ],
+      "metrics": {
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "permission_pass": true,
+      "expected_abstention_pass": true
+    },
+    {
+      "id": "training",
+      "retrieved": [
+        "onboarding"
+      ],
+      "metrics": {
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "permission_pass": true,
+      "expected_abstention_pass": true
+    },
+    {
+      "id": "hr-budget",
+      "retrieved": [
+        "hr-confidential"
+      ],
+      "metrics": {
+        "precision_at_k": 1.0,
+        "recall_at_k": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg_at_k": 1.0
+      },
+      "permission_pass": true,
+      "expected_abstention_pass": true
+    },
+    {
+      "id": "finance-budget-denied",
+      "retrieved": [],
+      "metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": null,
+        "reciprocal_rank": 0,
+        "ndcg_at_k": null
+      },
+      "permission_pass": true,
+      "expected_abstention_pass": true
+    },
+    {
+      "id": "other-tenant",
+      "retrieved": [],
+      "metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": null,
+        "reciprocal_rank": 0,
+        "ndcg_at_k": null
+      },
+      "permission_pass": true,
+      "expected_abstention_pass": true
+    },
+    {
+      "id": "no-membership",
+      "retrieved": [],
+      "metrics": {
+        "precision_at_k": 0.0,
+        "recall_at_k": null,
+        "reciprocal_rank": 0,
+        "ndcg_at_k": null
+      },
+      "permission_pass": true,
+      "expected_abstention_pass": true
+    }
+  ]
+}

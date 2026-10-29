@@ -2,6 +2,14 @@
 
 Een kennisassistent voor een fictief accountancykantoor, met bronverwijzingen en toegangscontrole vóór retrieval. Een financieel medewerker mag het HR-document niet terugvinden, ook niet met een gerichte vraag naar een geheim bedrag.
 
+## Portfolio update — 29 October 2026
+
+A knowledge workspace at `/console`, reproducible ranking metrics, safer Azure document replacement and request security controls.
+
+[Integration and limitations](docs/portfolio-integration.md) · [Current evidence matrix](evidence/FEATURES.md)
+
+![Actual implemented workspace](evidence/screenshots/desktop.png)
+
 **Status:** werkende lokale referentie en optionele Azure REST-adapter. De lokale modus gebruikt BM25-achtige trefwoordscores en extractieve antwoorden: geen semantische embeddings en geen LLM. De Azure-modus gebruikt echte embeddings, hybride Azure AI Search en Azure OpenAI-generatie wanneer je die services configureert. Azure-contracten zijn getest met geïnjecteerde HTTP-responses; er is geen live cloudkwaliteit gemeten. Alle meegeleverde inhoud is synthetisch.
 
 ## Starten
