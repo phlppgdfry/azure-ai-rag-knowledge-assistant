@@ -1,3 +1,4 @@
+from .security import install_security
 import hmac
 import json
 import os
@@ -6,6 +7,8 @@ from functools import lru_cache
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.security import APIKeyHeader
 from pydantic import BaseModel, ConfigDict, Field
+from fastapi.responses import HTMLResponse
+from importlib.resources import files
 
 from rag.core import Principal, Store
 
@@ -16,7 +19,7 @@ key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
 def principal(key: str | None = Depends(key_header)):
     # Only server configuration grants tenancy, membership and ingestion privilege.
     for secret, profile in json.loads(os.getenv("RAG_PRINCIPALS", "{}")).items():
-        if key and hmac.compare_digest(key, secret):
+        if key and hmac.compare_digest(key.encode("utf-8"), secret.encode("utf-8")):
             return Principal(profile["subject"], profile["tenant"], tuple(profile["groups"]), profile.get("admin", False))
     raise HTTPException(401, "Invalid API key")
 
@@ -43,6 +46,12 @@ class Document(BaseModel):
 @app.get("/health")
 def health():
     return {"status": "ok", "provider": os.getenv("RAG_PROVIDER", "local")}
+
+
+@app.get('/console', response_class=HTMLResponse, include_in_schema=False)
+def console():
+    return HTMLResponse(files('rag').joinpath('console.html').read_text(),
+                        headers={'Cache-Control': 'no-store', 'X-Frame-Options': 'DENY'})
 
 
 @app.post("/documents", status_code=201)
@@ -82,3 +91,6 @@ def ask(query: Query, user=Depends(principal)):
     except Exception as e:
         # Do not expose service responses, document bodies or credentials to callers.
         raise HTTPException(503, "Retrieval provider unavailable; no fallback was used") from e
+
+
+install_security(app, max_bytes=524288)

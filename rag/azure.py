@@ -3,6 +3,7 @@
 Live requests are opt-in. Transport injection enables contract tests without keys.
 """
 import json
+import math
 import os
 import re
 from urllib.parse import urlparse
@@ -57,7 +58,7 @@ class AzureRAG:
     def embedding(self, text):
         result = self.request("openai", "POST", "/openai/v1/embeddings", {"model": required("AZURE_EMBEDDING_DEPLOYMENT"), "input": text})
         vector = result["data"][0]["embedding"]
-        if not vector or not all(isinstance(x, (int, float)) for x in vector):
+        if not vector or not all(type(x) in (int, float) and math.isfinite(x) for x in vector):
             raise RuntimeError("Malformed embedding")
         return vector
 

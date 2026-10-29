@@ -1,0 +1,8 @@
+[
+  {"id":"invoice","tenant":"demo","groups":["finance"],"query":"factuur goedkeuring","k":1,"relevant":["invoice-policy"],"forbidden":["hr-confidential"]},
+  {"id":"training","tenant":"demo","groups":["finance"],"query":"AI-opleiding","k":1,"relevant":["onboarding"],"forbidden":["hr-confidential"]},
+  {"id":"hr-budget","tenant":"demo","groups":["hr"],"query":"7312","k":1,"relevant":["hr-confidential"]},
+  {"id":"finance-budget-denied","tenant":"demo","groups":["finance"],"query":"7312","k":1,"relevant":[],"forbidden":["hr-confidential"]},
+  {"id":"other-tenant","tenant":"other","groups":["finance"],"query":"factuur","k":1,"relevant":[],"forbidden":["invoice-policy","hr-confidential","onboarding"]},
+  {"id":"no-membership","tenant":"demo","groups":[],"query":"factuur","k":1,"relevant":[],"forbidden":["invoice-policy"]}
+]
