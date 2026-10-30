@@ -3,6 +3,7 @@ import json
 import math
 import tempfile
 from pathlib import Path
+from importlib.resources import files
 
 from .core import Principal, Store
 
@@ -21,12 +22,12 @@ def ranking_metrics(retrieved, relevant, k):
 
 
 def benchmark():
-    root = Path(__file__).resolve().parents[1]
-    cases = json.loads((root / 'fixtures/retrieval-cases.json').read_text())
+    data = files("rag").joinpath("data")
+    cases = json.loads(data.joinpath('retrieval-cases.json').read_text())
     rows = []
     with tempfile.TemporaryDirectory() as folder:
         store = Store(Path(folder) / 'eval.db')
-        for doc in json.loads((root / 'fixtures/documents.json').read_text()):
+        for doc in json.loads(data.joinpath('documents.json').read_text()):
             store.upsert(Principal('admin', 'demo', (), True), doc)
         for case in cases:
             user = Principal('eval', case['tenant'], tuple(case['groups']))

@@ -1,0 +1,22 @@
+{
+  "wheel": "azure_ai_rag_knowledge_assistant-0.1.0-py3-none-any.whl",
+  "sha256": "23d869549638f37da2f29521c999b4b8f3be7e6852c5c0c8d744f8062ff1a827",
+  "members": [
+    "azure_ai_rag_knowledge_assistant-0.1.0.dist-info/licenses/LICENSE",
+    "rag/__init__.py",
+    "rag/api.py",
+    "rag/azure.py",
+    "rag/console.html",
+    "rag/core.py",
+    "rag/demo.py",
+    "rag/evaluate.py",
+    "rag/index.py",
+    "rag/security.py",
+    "rag/data/documents.json",
+    "rag/data/retrieval-cases.json",
+    "azure_ai_rag_knowledge_assistant-0.1.0.dist-info/METADATA",
+    "azure_ai_rag_knowledge_assistant-0.1.0.dist-info/WHEEL",
+    "azure_ai_rag_knowledge_assistant-0.1.0.dist-info/top_level.txt",
+    "azure_ai_rag_knowledge_assistant-0.1.0.dist-info/RECORD"
+  ]
+}

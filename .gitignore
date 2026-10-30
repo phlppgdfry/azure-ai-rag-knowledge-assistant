@@ -9,7 +9,16 @@ __pycache__/
 *.sqlite3*
 data/
 !data/.gitkeep
+!rag/data/
+!rag/data/*.json
 .DS_Store
 build/
 dist/
 reports/
+
+# Local verification and package outputs
+.quality-venv/
+reports/
+build/
+dist/
+*.whl
