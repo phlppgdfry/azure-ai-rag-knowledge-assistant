@@ -1,6 +1,6 @@
 # Knowledge Assistant
 
-[Portfolio case study](https://github.com/phlppgdfry/ai-transformation-playbook/tree/portfolio/enterprise-quality-2026-10-29) · [Current release evaluation](docs/release.md) · [Capability evidence](evidence/release-2026-10-30/FEATURES.md). Local checks are recorded; hosted CI and cloud runtime remain separately unverified.
+[Portfolio case study](https://github.com/phlppgdfry/ai-transformation-playbook/tree/portfolio/enterprise-quality-2026-10-29) · [Current release evaluation](docs/release.md) · [Capability evidence](evidence/release-2026-10-30/FEATURES.md). Local and hosted release checks passed; [exact commit and workflow evidence](https://github.com/phlppgdfry/ai-transformation-playbook/blob/portfolio/enterprise-quality-2026-10-29/portfolio/release-2026-10-31/REPORT.md). Cloud runtime remains unverified.
 
 Een kennisassistent voor een fictief accountancykantoor, met bronverwijzingen en toegangscontrole vóór retrieval. Een financieel medewerker mag het HR-document niet terugvinden, ook niet met een gerichte vraag naar een geheim bedrag.
 
