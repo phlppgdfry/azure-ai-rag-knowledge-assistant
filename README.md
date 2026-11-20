@@ -1,5 +1,11 @@
 # Knowledge Assistant
 
+<!-- showcase:start -->
+> **[▶ Try the access check](https://phlppgdfry.github.io/azure-ai-rag-knowledge-assistant/)** — ask as a finance, HR or new employee and see restricted documents removed before ranking, with the same retrieval logic and scores as the Python code.
+
+[![Try the access check: azure-ai-rag-knowledge-assistant](site/demo.png)](https://phlppgdfry.github.io/azure-ai-rag-knowledge-assistant/)
+<!-- showcase:end -->
+
 **Stack:** Python · FastAPI · Pydantic · SQLite · local lexical retrieval · optional Azure REST adapters. [Portfolio v1.0 release scope](docs/releases/portfolio-v1.0.0.md).
 
 [Portfolio case study](https://github.com/phlppgdfry/ai-transformation-playbook/tree/portfolio/enterprise-quality-2026-10-29) · [Current release evaluation](docs/release.md) · [Capability evidence](evidence/release-2026-10-30/FEATURES.md). Local and hosted release checks passed; [exact commit and workflow evidence](https://github.com/phlppgdfry/ai-transformation-playbook/blob/portfolio/enterprise-quality-2026-10-29/portfolio/release-2026-10-31/REPORT.md). Cloud runtime remains unverified.
